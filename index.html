@@ -12,7 +12,7 @@ let dx; // Value for incrementing x
 let yvalues; // Using an array to store height values for the wave
 let f_x = 'sin(x)';
 
-function greet(){
+function processInput(){
   const name = input.value();
   f_x = name;
 }
@@ -27,9 +27,9 @@ function setup() {
 
   button = createButton('Use');
   button.position(input.x + input.width, 65);
-  button.mousePressed(greet);
+  button.mousePressed(processInput);
 
-  greeting = createElement('h2', 'what is your name?');
+  greeting = createElement('h2', 'Animated Plotter');
   greeting.position(20, 5);
 
   textAlign(CENTER);
